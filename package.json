@@ -1,0 +1,11 @@
+{
+  "name": "corshunter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "\"cd server && npm install\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
