@@ -1,9 +1,8 @@
 import user from "../models/user.js";
 
 export async function viewFriends(req,res){
-    const Userid=req.user.id;
-    if(!Userid) return res.json({message:"UnAuthorized"})
-    const User=await user.findById(Userid);
+    const User=req.user;
+    if(!User) return res.json({message:"UnAuthorized"})
 
     const friends=User.friends;
     
@@ -23,8 +22,7 @@ export async function viewFriends(req,res){
 
 export async function addFriend(req,res){
     const email=req.params.email;
-    const Userid=req.user.id;
-    const User=await user.findById(Userid);
+    const User=req.user;
     try{
         const friend=await user.findOne({email:email});
 
@@ -44,5 +42,40 @@ export async function addFriend(req,res){
     }
     catch (error) {
         res.status(500).json({ error: error.message });
+    }
+}
+
+export async function viewLeaderboard(req,res){
+    const leaderboard=[];
+    const User = req.user;
+
+    leaderboard.push({name:User.name,coins:User.coins});
+    const friends=User.friends;
+
+    try{
+        const friendArray = await Promise.all(
+            friends.map(async (friendId) => {
+                return await user.findById(friendId);
+            })
+        );
+        
+        friendArray.forEach((e)=>{
+            leaderboard.push({name:e.name,coins:e.coins});
+        })
+
+
+        leaderboard.sort((a, b)=> {
+            if (a.coins > b.coins)
+                return -1;
+            if (a.coins < b.coins)
+                return 1;
+            return 0;
+        })
+
+        return res.json(leaderboard);
+
+        
+    } catch(e){
+        return res.json({message:'No Friends Found', error:e})
     }
 }
