@@ -29,6 +29,9 @@ const userSchema=new mongoose.Schema({
         type:String,
         enum:["Male","Female"]
     },
+    age:{
+        type:Number
+    },
     coins:{
         type:Number,
         default:0
