@@ -64,7 +64,7 @@ h2 {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  gap: 20px; /* Added gap between items */
+  gap: 20px; 
 }
 
 .calories_container, .workout, .average, .pie-chart-container {

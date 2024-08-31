@@ -36,6 +36,7 @@ function generateWorkoutCards() {
                 <i class="fas fa-clock"></i>
                 <p>Time: ${workout.time}</p>
             </div>
+            <button class="complete">Complete</button>
         `;
         container.appendChild(card);
     });
