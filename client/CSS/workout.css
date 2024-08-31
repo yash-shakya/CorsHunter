@@ -99,7 +99,8 @@ h2 {
 }
 
 .card img {
-    width: 80%; 
+    width: 200px; 
+    max-height: 100px;
     height: auto;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -133,4 +134,15 @@ h2 {
     margin-right: 5px;
     font-size: 20px;
     color: #0073e6;
+}
+.card button {
+    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
