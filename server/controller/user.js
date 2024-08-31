@@ -23,8 +23,10 @@ export async function handleLogin(req,res){
     })
     if(!User) return res.send("Invalid email or password");
     const id=User.id;
+    const name=User.name;
     const token = jwt.sign({
         id,
+        name,
         email,
         password
     },'YOUR_SECRET_KEY');

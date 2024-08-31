@@ -25,10 +25,18 @@ const userSchema=new mongoose.Schema({
     height:{
         type:Number
     },
+    gender:{
+        type:String,
+        enum:["Male","Female"]
+    },
     coins:{
         type:Number,
         default:0
-    }
+    },
+    friends:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    }]
 },{timestamps:true});
 
 const user=mongoose.model("user",userSchema);

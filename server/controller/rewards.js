@@ -18,14 +18,8 @@ export async function addCoupon(req,res){
 
 export async function exchangeCoupon(req,res){
     const couponId=req.params.id;
-    const token = req.headers.cookie.split('token=')[1].split(';')[0];
-    if (!token) {
-        return res.status(401).json({ message: 'Unauthorized' });
-    }
     try {
-        const decoded = jwt.verify(token,'YOUR_SECRET_KEY');
-        const {id}=decoded;
-        const User=await user.findById(id);
+        const User=req.user;
         if(!user) return res.json({message:"User not Found"});
         const coins=User.coins;
         if(coins<1000) return res.json({message:"Not enough coin"});
@@ -37,6 +31,6 @@ export async function exchangeCoupon(req,res){
             return res.json(Coupon);
         }
     } catch (err) {
-        return res.status(401).json({ message: 'Invalid token', error:err });
+        return res.status(401).json({ message: 'Error Occured', error:err });
     }
 }
