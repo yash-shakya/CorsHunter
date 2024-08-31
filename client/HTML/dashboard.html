@@ -14,39 +14,35 @@
           <li><a href="friends.html" class="nav-link">Friends</a></li>
           <li><a href="rewards.html" class="nav-link">Rewards</a></li>
         </ul>
-        <div class="nav-profile">
-            <a href="#" class="nav-link">Profile</a>
-        </div>
-      </nav>
-      <br>
-      <br>
-      <div class="parent_container">
+    </nav>
+    <br><br>
+    <div class="parent_container">
         <div class="calories_container">
-          <div class="calories_title">Calories Burned</div>
-          <div class="calories_value">13500.00</div>
-          <div class="calories_unit">kcal</div>
-          <div class="calories_percentage">(+10%)</div>
-          <div class="calories_description">Total calories burned today</div>
+            <div class="calories_title">Calories Burned</div>
+            <div class="calories_value" id="caloriesValue">13500.00</div>
+            <div class="calories_unit" id="caloriesUnit">kcal</div>
+            <div class="calories_percentage" id="caloriesPercentage">(+10%)</div>
+            <div class="calories_description">Total calories burned today</div>
         </div>
         <div class="workout">
-          <div class="workout_title">Workout</div>
-          <div class="workout_value">6</div>
-          <div class="workout_description">Total no of workouts for today</div>
+            <div class="workout_title">Workout</div>
+            <div class="workout_value" id="workoutValue">6</div>
+            <div class="workout_description">Total number of workouts for today</div>
         </div>
         <div class="average">
-          <div class="average_title">Average Calories Burned</div>
-          <div class="average_value">13500.00</div>
-          <div class="average_unit">kcal</div>
-          <div class="average_percentage">(+10%)</div>
-          <div class="average_description">Average Calories Burned on each workout</div>
+            <div class="average_title">Average Calories Burned</div>
+            <div class="average_value" id="averageValue">13500.00</div>
+            <div class="average_unit" id="averageUnit">kcal</div>
+            <div class="average_percentage" id="averagePercentage">(+10%)</div>
+            <div class="average_description">Average Calories Burned on each workout</div>
         </div>
         <div class="pie-chart-parent-container">
-          <div class="pie-chart-container">
-            <div class="pie-chart-title">Personal Record of this week</div>
-            <div class="pie-chart"></div>
-          </div>
+            <div class="pie-chart-container">
+                <div class="pie-chart-title">Personal Record of this week</div>
+                <div class="pie-chart" id="pieChart"></div>
+            </div>
         </div>
-      </div>
+    </div>
     <script src="../JAVASCRIPT/dashboard.js"></script>
 </body>
 </html>
