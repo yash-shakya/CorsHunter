@@ -1,6 +1,7 @@
 const workouts = [
     {
         category: '#Legs',
+        img: '../ASSETS/back_squat.jpg',
         name: 'Back Squat',
         sets: 5,
         reps: 15,
@@ -9,6 +10,7 @@ const workouts = [
     },
     {
         category: '#Arms',
+        img: '../ASSETS/bicep_curl.jpg',
         name: 'Bicep Curl',
         sets: 4,
         reps: 12,
@@ -23,15 +25,16 @@ function generateWorkoutCards() {
         card.className = 'card';
         card.innerHTML = `
             <p>${workout.category}</p>
+            <img src=${workout.img} alt="Workout Type">
             <h2>${workout.name}</h2>
             <p>Count: ${workout.sets} sets X ${workout.reps} reps</p>
             <div class="info">
                 <i class="fas fa-weight"></i>
-                <p>${workout.weight}</p>
+                <p>Weight: ${workout.weight}</p>
             </div>
             <div class="info">
                 <i class="fas fa-clock"></i>
-                <p>${workout.time}</p>
+                <p>Time: ${workout.time}</p>
             </div>
         `;
         container.appendChild(card);

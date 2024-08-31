@@ -33,156 +33,96 @@
     margin-left: auto;
 }
 
+h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #003366;
+    margin: 20px 0;
+}
+
 .parent_container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    flex-wrap: wrap;
+    gap: 20px; /* Added gap between items */
 }
 
-.calories_container {
+.calories_container, .workout, .average {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
     padding: 20px;
     width: 300px;
     font-family: "Poppins", sans-serif;
+    text-align: center; /* Center text for consistency */
 }
-  
-.calories_title {
+
+.calories_title, .workout_title, .average_title {
     color: #007bff;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-  
-.calories_value {
+
+.calories_value, .workout_value, .average_value {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-  
-.calories_unit {
+
+.calories_unit, .average_unit {
     font-size: 16px;
     margin-right: 10px;
 }
-  
-.calories_percentage {
+
+.calories_percentage, .workout_percentage, .average_percentage {
     color: #4CAF50;
     font-size: 16px;
     font-weight: bold;
 }
-  
-.calories_description {
+
+.calories_description, .workout_description, .average_description {
     font-size: 14px;
     color: #333;
 }
-.workout {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    font-family: "Poppins", sans-serif;
-}
-  
-.workout_title {
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-top: 13px;
-}
-  
-.workout_value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.workout_percentage {
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
-}
-  
-.workout_description {
-    font-size: 14px;
-    color: #333;
-    padding-bottom: 25px;
-}
-.average {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    font-family: "Poppins", sans-serif;
-}
-  
-.average_title {
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-.average_value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-  
-.average_unit {
-    font-size: 16px;
-    margin-right: 10px;
-}
-  
-.average_percentage {
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
-}
-  
-.average_description {
-    font-size: 14px;
-    color: #333;
-}
+
 .pie-chart-parent-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding-top: 20px;
 }
+
 .pie-chart-container {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
     padding: 20px;
-    width: 260px;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
+    width: 300px; /* Adjusted width to match other cards */
+    text-align: center;
 }
 
 .pie-chart {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: auto;
+    margin: 20px auto;
     background: conic-gradient(
         #007bff 0% 55%, 
-        #ccc 55% 100% 
+        #ccc 55% 100%
     );
     border: 10px solid #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+
 .pie-chart-title {
     color: #000000;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    margin: auto;
 }
