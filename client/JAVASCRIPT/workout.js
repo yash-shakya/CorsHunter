@@ -1,6 +1,6 @@
 const workouts = [
     {
-        category: '#Legs',
+        category: 'Legs',
         img: '../ASSETS/back_squat.jpg',
         name: 'Back Squat',
         sets: 5,
@@ -9,7 +9,7 @@ const workouts = [
         time: '60 mins'
     },
     {
-        category: '#Arms',
+        category: 'Arms',
         img: '../ASSETS/bicep_curl.jpg',
         name: 'Bicep Curl',
         sets: 4,
