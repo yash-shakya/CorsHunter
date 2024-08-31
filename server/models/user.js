@@ -18,6 +18,16 @@ const userSchema=new mongoose.Schema({
         type:String,
         enum:['admin','user'],
         default:'user'
+    },
+    weight:{
+        type:Number,
+    },
+    height:{
+        type:Number
+    },
+    coins:{
+        type:Number,
+        default:0
     }
 },{timestamps:true});
 
