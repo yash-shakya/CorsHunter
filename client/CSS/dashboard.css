@@ -1,188 +1,158 @@
-.nav-bar {
-    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav-bar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+body {
+  background: url('../ASSETS/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-bar {
+    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+    padding: 10px 20px; /* Adjust top/bottom and left/right padding */
     display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    position: relative;
+    margin: 0 auto; /* Center align the nav bar */
+    width: fit-content; /* Adjust width to content */
+  }
+  
+
+.nav-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .nav-bar li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .nav-bar a.nav-link {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .nav-bar a.nav-link:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 .nav-profile {
-    margin-left: auto;
+  margin-left: auto;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #003366;
+  margin: 20px 0;
 }
 
 .parent_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px; /* Added gap between items */
 }
 
-.calories_container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    font-family: "Poppins", sans-serif;
+.calories_container, .workout, .average, .pie-chart-container {
+  background-color: rgba(255, 255, 255, 0.6); /* Increased transparency */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 300px;
+  font-family: "Poppins", sans-serif;
+  text-align: center; /* Center text for consistency */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
-  
-.calories_title {
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+/* Hover effects for cards */
+.calories_container:hover, 
+.workout:hover, 
+.average:hover, 
+.pie-chart-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.1); /* Enhance shadow */
 }
-  
-.calories_value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 5px;
+
+.calories_title, .workout_title, .average_title {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-  
-.calories_unit {
-    font-size: 16px;
-    margin-right: 10px;
+
+.calories_value, .workout_value, .average_value {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-  
-.calories_percentage {
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
+
+.calories_unit, .average_unit {
+  font-size: 16px;
+  margin-right: 10px;
 }
-  
-.calories_description {
-    font-size: 14px;
-    color: #333;
+
+.calories_percentage, .workout_percentage, .average_percentage {
+  color: #4CAF50;
+  font-size: 16px;
+  font-weight: bold;
 }
-.workout {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    font-family: "Poppins", sans-serif;
+
+.calories_description, .workout_description, .average_description {
+  font-size: 14px;
+  color: #333;
 }
-  
-.workout_title {
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-top: 13px;
-}
-  
-.workout_value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.workout_percentage {
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
-}
-  
-.workout_description {
-    font-size: 14px;
-    color: #333;
-    padding-bottom: 25px;
-}
-.average {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    font-family: "Poppins", sans-serif;
-}
-  
-.average_title {
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-.average_value {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-  
-.average_unit {
-    font-size: 16px;
-    margin-right: 10px;
-}
-  
-.average_percentage {
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
-}
-  
-.average_description {
-    font-size: 14px;
-    color: #333;
-}
+
 .pie-chart-parent-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
 }
+
 .pie-chart-container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 260px;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 0.6); /* Increased transparency */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 300px; /* Adjusted width to match other cards */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .pie-chart {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-    background: conic-gradient(
-        #007bff 0% 55%, 
-        #ccc 55% 100% 
-    );
-    border: 10px solid #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background: conic-gradient(
+      #007bff 0% 55%, 
+      #ccc 55% 100%
+  );
+  border: 10px solid rgba(255, 255, 255, 0.6); /* Increased transparency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
+
 .pie-chart-title {
-    color: #000000;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin: auto;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }

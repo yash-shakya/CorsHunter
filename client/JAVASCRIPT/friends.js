@@ -1,15 +1,11 @@
 const friends = [
     {
         name: 'John Doe',
-        workoutCount: 6,
-        weight: '30 kg',
-        caloriesBurned: 150
+        coins_count: 6,
     },
     {
         name: 'Jane Smith',
-        workoutCount: 8,
-        weight: '25 kg',
-        caloriesBurned: 200
+        coins_count: 8,
     },
 ];
 function generateFriendCards() {
@@ -19,15 +15,7 @@ function generateFriendCards() {
         card.className = 'card';
         card.innerHTML = `
             <h2>${friend.name}</h2>
-            <p>Workout Count: ${friend.workoutCount}</p>
-            <div class="info">
-                <i class="fas fa-weight"></i>
-                <p>${friend.weight}</p>
-            </div>
-            <div class="info">
-                <i class="fas fa-clock"></i>
-                <p>Calories burned: ${friend.caloriesBurned}</p>
-            </div>
+            <p>Coins: ${friend.coins_count}</p>
         `;
         container.appendChild(card);
     });
